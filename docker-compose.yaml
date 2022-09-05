@@ -57,10 +57,6 @@ x-airflow-common:
     - /home/debian/airflow/logs:/opt/airflow/logs
     - /home/debian/airflow/plugins:/opt/airflow/plugins
     - "/var/run/docker.sock:/var/run/docker.sock"
-#    - /home/debian/airflow/dags:/opt/airflow/dags
-#    - /home/debian/airflow/logs:/opt/airflow/logs
-#    - /home/debian/airflow/plugins:/opt/airflow/plugins
-#    - "/var/run/docker.sock:/var/run/docker.sock" # We will pass the Docker Deamon as a volume to allow the webserver containers start docker images. Ref: https://stackoverflow.com/q/51342810/7024760
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
 
 services:
